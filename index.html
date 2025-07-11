@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitality Health Hub - Your Partner in Wellness</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMZ+AL+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2QYA/EDj6g/Go4DNYmiraXvP5VwW6F1/jK/Lg0K7z/Lg00w0w0w000w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-heartbeat me-2"></i>Vitality Health Hub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#doctors">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <button class="btn btn-light text-primary fw-bold" data-bs-toggle="modal" data-bs-target="#appointmentModal">Book Appointment</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Appointment Modal (Bootstrap Component) -->
+    <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title" id="appointmentModalLabel">Book Your Appointment</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="appointmentForm">
+              <div class="mb-3">
+                <label for="patientName" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="patientName" required>
+              </div>
+              <div class="mb-3">
+                <label for="patientEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="patientEmail" required>
+              </div>
+              <div class="mb-3">
+                <label for="serviceSelect" class="form-label">Service Needed</label>
+                <select class="form-select" id="serviceSelect" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option>General Check-up</option>
+                  <option>Cardiology</option>
+                  <option>Pediatrics</option>
+                  <option>Physiotherapy</option>
+                  <option>Dermatology</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="appointmentDate" class="form-label">Preferred Date</label>
+                <input type="date" class="form-control" id="appointmentDate" required>
+              </div>
+              <div class="mb-3">
+                <label for="appointmentTime" class="form-label">Preferred Time</label>
+                <input type="time" class="form-control" id="appointmentTime" required>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Confirm Appointment</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Hero Banner -->
+    <section id="home" class="hero-banner d-flex align-items-center text-white text-center py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 mx-auto">
+                    <h1 class="display-2 fw-bold mb-4">Your Partner in Wellness</h1>
+                    <p class="lead mb-5">Providing compassionate and comprehensive healthcare services for a healthier you and your family.</p>
+                    <button class="btn btn-light btn-lg shadow-lg book-appointment-btn" data-bs-toggle="modal" data-bs-target="#appointmentModal">Book Your First Appointment</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold text-primary">Our Comprehensive Services</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 text-center">
+                <!-- Service 1 -->
+                <div class="col">
+                    <div class="card h-100 p-4 shadow-sm border-0 service-card">
+                        <div class="card-body">
+                            <i class="fas fa-stethoscope service-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">General Check-up</h5>
+                            <p class="card-text text-muted">Regular health assessments to keep you in optimal condition.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col">
+                    <div class="card h-100 p-4 shadow-sm border-0 service-card">
+                        <div class="card-body">
+                            <i class="fas fa-heart service-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">Cardiology</h5>
+                            <p class="card-text text-muted">Expert care for heart health, including diagnostics and treatment plans.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col">
+                    <div class="card h-100 p-4 shadow-sm border-0 service-card">
+                        <div class="card-body">
+                            <i class="fas fa-child service-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">Pediatrics</h5>
+                            <p class="card-text text-muted">Dedicated healthcare for infants, children, and adolescents.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="col">
+                    <div class="card h-100 p-4 shadow-sm border-0 service-card">
+                        <div class="card-body">
+                            <i class="fas fa-running service-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">Physiotherapy</h5>
+                            <p class="card-text text-muted">Rehabilitation and pain management to restore mobility and function.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="col">
+                    <div class="card h-100 p-4 shadow-sm border-0 service-card">
+                        <div class="card-body">
+                            <i class="fas fa-brain service-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">Neurology</h5>
+                            <p class="card-text text-muted">Specialized diagnosis and treatment for nervous system disorders.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="col">
+                    <div class="card h-100 p-4 shadow-sm border-0 service-card">
+                        <div class="card-body">
+                            <i class="fas fa-tooth service-icon mb-3"></i>
+                            <h5 class="card-title fw-bold">Dental Care</h5>
+                            <p class="card-text text-muted">Comprehensive dental services for a healthy and bright smile.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Our Doctors Section -->
+    <section id="doctors" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold text-primary">Meet Our Dedicated Doctors</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Doctor 1 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm doctor-card">
+                        <img src="https://placehold.co/400x300/e0f7fa/00796b?text=Dr.+Anjali+Sharma" class="card-img-top" alt="Dr. Anjali Sharma">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold text-primary">Dr. Anjali Sharma</h5>
+                            <p class="card-text text-muted">Cardiologist</p>
+                            <p class="small text-muted">Dr. Sharma is a leading cardiologist with over 15 years of experience in heart health and preventative care.</p>
+                            <div class="social-icons mt-3">
+                                <a href="#" class="text-primary me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-primary me-2"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Doctor 2 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm doctor-card">
+                        <img src="https://placehold.co/400x300/e0f7fa/00796b?text=Dr.+Rahul+Verma" class="card-img-top" alt="Dr. Rahul Verma">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold text-primary">Dr. Rahul Verma</h5>
+                            <p class="card-text text-muted">Pediatrician</p>
+                            <p class="small text-muted">Dr. Verma is passionate about child health, offering compassionate care for children of all ages.</p>
+                            <div class="social-icons mt-3">
+                                <a href="#" class="text-primary me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-primary me-2"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Doctor 3 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm doctor-card">
+                        <img src="https://placehold.co/400x300/e0f7fa/00796b?text=Dr.+Priya+Singh" class="card-img-top" alt="Dr. Priya Singh">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold text-primary">Dr. Priya Singh</h5>
+                            <p class="card-text text-muted">General Physician</p>
+                            <p class="small text-muted">Dr. Singh provides comprehensive primary care, focusing on preventive medicine and patient education.</p>
+                            <div class="social-icons mt-3">
+                                <a href="#" class="text-primary me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="text-primary me-2"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Testimonials Section (Bootstrap Carousel) -->
+    <section id="testimonials" class="py-5 bg-info bg-opacity-10">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold text-primary">What Our Patients Say</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Testimonial 1 -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 text-center">
+                                <i class="fas fa-quote-left fa-2x text-muted mb-3"></i>
+                                <p class="lead fst-italic">"The care at Vitality Health Hub is exceptional. Dr. Sharma was incredibly thorough and compassionate. I highly recommend their cardiology department!"</p>
+                                <p class="fw-bold mt-3">- Ramesh K.</p>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8 text-center">
+                                <i class="fas fa-quote-left fa-2x text-muted mb-3"></i>
+                                <p class="lead fst-italic">"My kids love visiting Dr. Verma. He makes them feel comfortable, and his advice is always practical and helpful. A truly child-friendly clinic."</p>
+                                <p class="fw-bold mt-3">- Sunita M.</p>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Contact Us Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold text-primary">Get in Touch</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h4 class="fw-bold text-primary mb-3">Our Location</h4>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 456 Health Lane, Wellness City, State, 123456</p>
+                    <p><i class="fas fa-phone me-2"></i> +91 12345 67890</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@vitalityhealthhub.com</p>
+                    <div class="map-placeholder mt-4 p-3 bg-light rounded shadow-sm text-center text-muted">
+                        <p>Map Placeholder</p>
+                        <i class="fas fa-map fa-3x mb-2"></i>
+                        <p>Visit us for directions</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="fw-bold text-primary mb-3">Send Us a Message</h4>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="contactName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="contactEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactMessage" class="form-label">Message</label>
+                            <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold text-primary">Vitality Health Hub</h5>
+                    <p>Committed to providing high-quality, patient-centered healthcare services.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold text-primary">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#services" class="text-white text-decoration-none">Services</a></li>
+                        <li><a href="#doctors" class="text-white text-decoration-none">Doctors</a></li>
+                        <li><a href="#contact" class="text-white text-decoration-none">Contact Us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold text-primary">Connect With Us</h5>
+                    <div class="social-icons fs-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <p class="text-center mb-0">&copy; 2025 Vitality Health Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

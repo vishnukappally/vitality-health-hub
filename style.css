@@ -1,0 +1,207 @@
+/* Custom CSS for Vitality Health Hub */
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding-top: 72px; /* Adjust for fixed navbar height + shadow */
+    background-color: #f8f9fa; /* Light background for the whole page */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #212529;
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* Navbar */
+.navbar-brand .fa-heartbeat {
+    color: var(--bs-light); /* Light color for icon on primary background */
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--bs-light) !important;
+}
+
+.navbar-nav .btn {
+    border-radius: 50px;
+    padding: 8px 20px;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0.7)), url('https://placehold.co/1500x800/007bff/ffffff?text=Modern+Clinic') no-repeat center center/cover;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+.hero-banner h1 {
+    font-size: calc(2.5rem + 2.5vw); /* Responsive font size */
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-banner p.lead {
+    font-size: calc(1.1rem + 0.5vw);
+    color: #e9ecef;
+}
+
+.hero-banner .btn {
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.hero-banner .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Services Section */
+.service-card {
+    border: 1px solid var(--bs-primary);
+    border-radius: 0.75rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+.service-icon {
+    font-size: 3.5rem;
+    color: var(--bs-primary);
+    margin-bottom: 15px;
+}
+
+/* Doctors Section */
+.doctor-card {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+.doctor-card img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.doctor-card .card-body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.doctor-card .social-icons a {
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.doctor-card .social-icons a:hover {
+    color: var(--bs-secondary) !important;
+}
+
+/* Testimonials Section */
+#testimonials .carousel-item {
+    padding: 20px 0;
+}
+
+#testimonials .lead {
+    font-size: 1.35rem;
+    color: #495057;
+}
+
+#testimonials .fa-quote-left {
+    color: var(--bs-secondary);
+}
+
+/* Contact Us Section */
+.map-placeholder {
+    background-color: #e9ecef;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #6c757d;
+    border: 1px dashed #adb5bd;
+}
+
+.map-placeholder .fa-map {
+    font-size: 4rem;
+    color: #6c757d;
+}
+
+#contactForm .btn {
+    font-weight: bold;
+}
+
+/* Footer */
+footer a {
+    color: #ced4da;
+    transition: color 0.3s ease;
+}
+footer a:hover {
+    color: #fff;
+}
+footer .social-icons .fab {
+    transition: color 0.3s ease;
+}
+footer .social-icons .fab:hover {
+    color: var(--bs-primary); /* Use primary color for social icons on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .navbar-nav .btn {
+        margin-top: 15px;
+        width: 100%;
+    }
+    .hero-banner h1 {
+        font-size: 3rem;
+    }
+    .hero-banner p.lead {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    body {
+        padding-top: 56px;
+    }
+    section {
+        padding: 50px 0;
+    }
+    .hero-banner h1 {
+        font-size: 2.2rem;
+    }
+    .hero-banner p.lead {
+        font-size: 1rem;
+    }
+    .map-placeholder {
+        min-height: 200px;
+    }
+}
